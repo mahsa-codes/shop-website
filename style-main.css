@@ -1,0 +1,101 @@
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    display: grid;
+    grid-template-rows: 100px, 1fr , 100px;
+    margin: 30px 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 10px 0;
+}
+
+.header-log {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+
+.header-nav .navbar {
+    list-style: none;
+    display: flex;
+    padding: 0 10px;
+    gap: 10px;
+    margin: 0
+}
+.header-log .logout-page {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.header-log .logout-page .hidden {
+    display: none;
+}
+
+.navbar .active a {
+    color: rgb(12, 90, 206);
+}
+
+.navbar a {
+    color: rgb(16, 16, 16);
+}
+
+.navbar a:link {
+    text-decoration: none;
+}
+.navbar a:hover {
+    text-decoration: underline;
+    color: rgb(12, 90, 206);
+}
+.navbar-line hr {
+    border: 2px solid gray;
+
+}
+
+.logout-page #welcome {
+    font-size: 15px;
+}
+
+#logoutBtn {
+    
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(161, 4, 38);
+    border: 1px solid rgb(235, 246, 246);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer p{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 15px;
+}
+.footer span {
+    text-align: center;
+}
+
+.footer hr {
+    border: 2px solid gray;
+}

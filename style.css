@@ -4,11 +4,16 @@
 }
 
 body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
     text-align: center;
     margin-top: 60px;
 }
 
-.login-page, .register-page, .logout-page {
+.login-page, .register-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,24 +21,6 @@ body {
     margin-top: 50px;
 }
 
-
-#welcome {
-    font-size: 40px;
-}
-
-.hidden { 
-    display: none;
-}
-
-#logoutBtn {
-    font-size: 20px;
-    padding: 10px;
-    max-width: 300px;
-    color: white;
-    background-color: rgb(161, 4, 38);
-    border: 1px solid rgb(235, 246, 246);
-    border-radius: 5px;
-}
 
 #loginForm, #registerForm {
     margin-top: 20px;
