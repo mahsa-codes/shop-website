@@ -10,36 +10,44 @@ body {
     font-variation-settings:
         "wdth" 100;
     display: grid;
-    grid-template-rows: 100px, 1fr , 100px;
-    margin: 30px 20px;
-    height: 100%;
+    grid-template-rows: auto 1fr auto;
+    height: 90vh;
+    margin: 0;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .main {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    flex: 1;
 }
 
+.footer {
+     display: flex;
+     flex-direction: column;
+     margin-top: 2px;
+ }
+
+
+/* HEADER */
 .header-nav {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
     margin: 0px;
-    padding: 10px 0;
+    padding-top: 10px;
 }
+
 
 .header-log {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
     margin: 0px 10px;
-    padding: 0px;
+    padding-top: 10px;
 }
 
 
@@ -93,6 +101,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+/* END HEADER */
 
 /* ABOUT */
 
@@ -101,7 +110,6 @@ body {
     border-radius: 10px;
     box-shadow: 12px 12px 50px rgba(7, 7, 7, 0.1);
     padding: 20px 20px 28px 20px;
-    margin: 20px;
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -124,10 +132,46 @@ body {
 }
 /* END ABOUT */
 
+/* CONTACT FORM */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 12px 12px 50px rgba(7, 7, 7, 0.1);
+    background-color: rgb(229, 234, 233);
+    padding: 20px 20px 34px 34px;
+    margin: 20px;
+    gap: 10px;
+
+}
+.contactForm input, textarea  {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.contactForm textarea {
+    height: 100px;
+}
+.contactForm .contactSubmit {
+    margin-top: 30px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(10, 130, 163);
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* END CONTACT FORM */
 
  /* FOOTER */
+
+
+
 .footer p{
-    margin: 0;
+    margin: 0 10px;
     padding: 0;
     font-weight: 400;
     font-size: 15px;
