@@ -1,0 +1,66 @@
+[
+    {
+        "id":1,
+        "title" : "HP Keyboard",
+        "price" : 1950,
+        "number" : 10,
+        "image" : "images/keyboard.jpg"
+    },
+    {
+        "id":2,
+        "title" : "Tesco Keyboard",
+        "price" : 2500,
+        "number" : 10,
+        "image" : "images/keyboard.jpg"
+    },
+    {
+        "id":3,
+        "title" : "Logitech Keyboard",
+        "price" : 3200,
+        "number" : 10,
+        "image" : "images/keyboard.jpg"
+    },
+    {
+        "id":4,
+        "title" : "HP Mouse",
+        "price" : 2350,
+        "number" : 10,
+        "image" : "images/mous.jpg"
+    },
+    {
+        "id":5,
+        "title" : "Tesco Mouse",
+        "price" : 3650,
+        "number" : 10,
+        "image" : "images/mous.jpg"
+    },
+    {
+        "id":6,
+        "title" : "Logitech Mouse",
+        "price" : 700,
+        "number" : 10,
+        "image" : "images/mous.jpg"
+    },
+    {
+        "id":7,
+        "title" : "Samsung Mobile",
+        "price" : 6500,
+        "number" : 10,
+        "image" : "images/mobile.jpg"
+    },
+    {
+        "id":8,
+        "title" : "Sony Mobile",
+        "price" : 5800,
+        "number" : 10,
+        "image" : "images/mobile.jpg"
+    },
+    {
+        "id":9,
+        "title" : "iphone Mobile",
+        "price" : 9000,
+        "number" : 10,
+        "image" : "images/mobile.jpg"
+    }
+
+]
