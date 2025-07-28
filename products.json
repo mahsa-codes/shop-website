@@ -4,63 +4,63 @@
         "title" : "HP Keyboard",
         "price" : 1950,
         "number" : 10,
-        "image" : "images/keyboard.jpg"
+        "image" : "images/keyboard.png"
     },
     {
         "id":2,
         "title" : "Tesco Keyboard",
         "price" : 2500,
         "number" : 10,
-        "image" : "images/keyboard.jpg"
+        "image" : "images/keyboard.png"
     },
     {
         "id":3,
         "title" : "Logitech Keyboard",
         "price" : 3200,
         "number" : 10,
-        "image" : "images/keyboard.jpg"
+        "image" : "images/keyboard.png"
     },
     {
         "id":4,
-        "title" : "HP Mouse",
+        "title" : "China Keyboard",
         "price" : 2350,
         "number" : 10,
-        "image" : "images/mous.jpg"
+        "image" : "images/keyboard.png"
     },
     {
         "id":5,
-        "title" : "Tesco Mouse",
+        "title" : "Android Keyboard",
         "price" : 3650,
         "number" : 10,
-        "image" : "images/mous.jpg"
+        "image" : "images/keyboard.png"
     },
     {
         "id":6,
-        "title" : "Logitech Mouse",
+        "title" : "Wireless Keyboard",
         "price" : 700,
         "number" : 10,
-        "image" : "images/mous.jpg"
+        "image" : "images/keyboard.png"
     },
     {
         "id":7,
-        "title" : "Samsung Mobile",
+        "title" : "Samsung Keyboard",
         "price" : 6500,
         "number" : 10,
-        "image" : "images/mobile.jpg"
+        "image" : "images/keyboard.png"
     },
     {
         "id":8,
-        "title" : "Sony Mobile",
+        "title" : "Sony Keyboard",
         "price" : 5800,
         "number" : 10,
-        "image" : "images/mobile.jpg"
+        "image" : "images/keyboard.png"
     },
     {
         "id":9,
-        "title" : "iphone Mobile",
+        "title" : "iphone Keyboard",
         "price" : 9000,
         "number" : 10,
-        "image" : "images/mobile.jpg"
+        "image" : "images/keyboard.png"
     }
 
 ]

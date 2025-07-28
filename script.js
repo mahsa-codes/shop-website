@@ -103,3 +103,32 @@ if (contactForm) {
     });
 }
 
+const productsContainer = document.querySelector(".products");
+if(productsContainer)  {
+    fetch('products.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(product => {
+                const newCard = document.createElement('div');
+                newCard.className = 'product-card';
+                newCard.innerHTML = `
+                    <h2 id="product-title">${product.title}</h2>
+                            <img src="${product.image}" alt="keyboard"/>
+                            <div class="product-buy">
+                                <p id="product-price">${product.price} $</p>
+                                <p id="product-number">${product.number}</p>
+                                <button id="buy" type="submit">Add To Cart</button>
+                            </div>`;
+                productsContainer.appendChild(newCard);        
+            });      
+        }) 
+        .catch(error => {
+            console.error('Error fetching or parsing JSON:', error);
+         });
+}
+         
+
+
+
+  
+
