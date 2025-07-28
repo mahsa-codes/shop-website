@@ -103,29 +103,45 @@ if (contactForm) {
     });
 }
 
-const productsContainer = document.querySelector(".products");
-if(productsContainer)  {
-    fetch('products.json')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(product => {
-                const newCard = document.createElement('div');
-                newCard.className = 'product-card';
-                newCard.innerHTML = `
-                    <h2 id="product-title">${product.title}</h2>
-                            <img src="${product.image}" alt="keyboard"/>
-                            <div class="product-buy">
-                                <p id="product-price">${product.price} $</p>
-                                <p id="product-number">${product.number}</p>
-                                <button id="buy" type="submit">Add To Cart</button>
-                            </div>`;
-                productsContainer.appendChild(newCard);        
-            });      
-        }) 
-        .catch(error => {
-            console.error('Error fetching or parsing JSON:', error);
-         });
-}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const productsContainer = document.querySelector(".products");
+    if(productsContainer)  {
+        fetch('products.json')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(product => {
+                    const newCard = document.createElement('div');
+                    newCard.className = 'product-card';
+                    newCard.innerHTML = `
+                        <h2 class="product-title">${product.title}</h2>
+                                <img src="${product.image}" alt="${product.title}"/>
+                                <div class="product-buy">
+                                    <p class="product-price">${product.price} $</p>
+                                    <p class="product-number">${product.number}</p>
+                                    <button class="buy" data-id="${product.id}" type="button">Add To Cart</button>
+                                </div>`;
+                    productsContainer.appendChild(newCard);        
+                });    
+                setupBuyProduct();
+            })
+            .catch(error => {
+                console.error('Error fetching or parsing JSON:', error);
+            });
+    }
+
+    function setupBuyProduct() {
+        const buyButtons = document.querySelectorAll(".buy");
+        buyButtons.forEach(button=>{
+            button.addEventListener('click', function(){
+                console.log("id product: ", button.dataset.id);
+            })    
+        })
+    }
+});
+
+
+
          
 
 

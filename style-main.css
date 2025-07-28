@@ -182,13 +182,13 @@ body {
 /* END CONTACT FORM */
 
 /* HOME */
- .sidebar {
+.sidebar {
     display: flex;
     flex-direction: column;
     border: 1px solid gray;
     border-radius: 10px;
     padding: 10px;
-    background-color: rgb(152, 203, 221);
+    background-color: rgb(219, 213, 227);
 }
 .products {
     display: grid;
