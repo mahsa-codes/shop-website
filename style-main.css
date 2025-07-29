@@ -188,13 +188,15 @@ body {
     border: 1px solid gray;
     border-radius: 10px;
     padding: 10px;
-    background-color: rgb(219, 213, 227);
+    align-items: center;
 }
 .products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+/* END HOME */
+/* PRODUCTS */
 .products .product-card {
     display: grid;
     justify-content: center;
@@ -243,7 +245,29 @@ body {
     border: none;
     cursor: pointer;
 }
-
+/* END PRODUCTS */
+/* SIDEBAR */
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px dashed gray;
+    padding: 10px;
+    background-color: rgb(246, 243, 249);
+    margin: 0;
+    padding: 5px 20px;
+}
+.cart-data-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; 
+    font-weight: 500;   
+}
+.cart-data-price p {
+    display: flex;
+}
+/* END SIDEBAR */
 
  /* FOOTER */
 .footer p{

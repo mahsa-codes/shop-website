@@ -153,9 +153,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     cart.push({...product, count : 1})
                 }
                 localStorage.setItem("cart", JSON.stringify(cart));
-                console.log("update cart: ", cart);
-                
-
             });    
         });
     }
