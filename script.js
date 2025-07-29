@@ -106,10 +106,12 @@ if (contactForm) {
 
 document.addEventListener('DOMContentLoaded', function() {
     const productsContainer = document.querySelector(".products");
+    let productsData = [];
     if(productsContainer)  {
         fetch('products.json')
             .then(response => response.json())
             .then(data => {
+                productsData = data;
                 data.forEach(product => {
                     const newCard = document.createElement('div');
                     newCard.className = 'product-card';
@@ -118,12 +120,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <img src="${product.image}" alt="${product.title}"/>
                                 <div class="product-buy">
                                     <p class="product-price">${product.price} $</p>
-                                    <p class="product-number">${product.number}</p>
+                                    <p class="product-number">${product.count}</p>
                                     <button class="buy" data-id="${product.id}" type="button">Add To Cart</button>
                                 </div>`;
                     productsContainer.appendChild(newCard);        
                 });    
                 setupBuyProduct();
+
             })
             .catch(error => {
                 console.error('Error fetching or parsing JSON:', error);
@@ -134,9 +137,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const buyButtons = document.querySelectorAll(".buy");
         buyButtons.forEach(button=>{
             button.addEventListener('click', function(){
-                console.log("id product: ", button.dataset.id);
-            })    
-        })
+                const productId = parseInt(button.dataset.id);
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const product = productsData.find(p=> p.id === productId);
+                const existItem = cart.find(item => item.id ===productId);
+                if(existItem) {
+                    existItem.count++;
+                } else {
+                    cart.push({...product, count : 1})
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                console.log("update cart: ", cart);
+                
+
+            });    
+        });
     }
 });
 

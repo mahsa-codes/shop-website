@@ -3,63 +3,63 @@
         "id":1,
         "title" : "HP Keyboard",
         "price" : 1950,
-        "number" : 10,
+        "count" : 10,
         "image" : "images/keyboard.png"
     },
     {
         "id":2,
         "title" : "Tesco Keyboard",
         "price" : 2500,
-        "number" : 10,
+        "count" : 10,
         "image" : "images/keyboard.png"
     },
     {
         "id":3,
         "title" : "Logitech Keyboard",
         "price" : 3200,
-        "number" : 10,
+        "count" : 10,
         "image" : "images/keyboard.png"
     },
     {
         "id":4,
         "title" : "China Keyboard",
         "price" : 2350,
-        "number" : 10,
+        "count" : 10,
         "image" : "images/keyboard.png"
     },
     {
         "id":5,
         "title" : "Android Keyboard",
         "price" : 3650,
-        "number" : 10,
+        "count" : 10,
         "image" : "images/keyboard.png"
     },
     {
         "id":6,
         "title" : "Wireless Keyboard",
         "price" : 700,
-        "number" : 10,
+        "count" : 10,
         "image" : "images/keyboard.png"
     },
     {
         "id":7,
         "title" : "Samsung Keyboard",
         "price" : 6500,
-        "number" : 10,
+        "count" : 10,
         "image" : "images/keyboard.png"
     },
     {
         "id":8,
         "title" : "Sony Keyboard",
         "price" : 5800,
-        "number" : 10,
+        "count" : 10,
         "image" : "images/keyboard.png"
     },
     {
         "id":9,
         "title" : "iphone Keyboard",
         "price" : 9000,
-        "number" : 10,
+        "count" : 10,
         "image" : "images/keyboard.png"
     }
 
