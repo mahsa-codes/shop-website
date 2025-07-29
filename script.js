@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     productsContainer.appendChild(newCard);        
                 });    
                 setupBuyProduct();
+                renderCart();
 
             })
             .catch(error => {
@@ -153,16 +154,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     cart.push({...product, count : 1})
                 }
                 localStorage.setItem("cart", JSON.stringify(cart));
-                renerCart()
+                renderCart();
             });    
         });
     }
 
-    function renerCart() {
+    function renderCart() {
         const sidebar = document.querySelector(".sidebar");
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        if (length.cart === 0) {
-            sidebar.innerHTML = "Your Shopping List is emplty";
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        if (cart.length === 0) {
+            sidebar.innerHTML = "Your Shopping List is empty";
             return;
         }
         sidebar.innerHTML = ""
