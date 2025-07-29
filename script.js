@@ -153,7 +153,33 @@ document.addEventListener('DOMContentLoaded', function() {
                     cart.push({...product, count : 1})
                 }
                 localStorage.setItem("cart", JSON.stringify(cart));
+                renerCart()
             });    
+        });
+    }
+
+    function renerCart() {
+        const sidebar = document.querySelector(".sidebar");
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        if (length.cart === 0) {
+            sidebar.innerHTML = "Your Shopping List is emplty";
+            return;
+        }
+        sidebar.innerHTML = ""
+        cart.forEach(item => {
+            const newCart = document.createElement('div');
+            newCart.className = "cart"
+            newCart.innerHTML = `
+            <h2 class="cart-title">${item.title}</h2>
+                    <div class="cart-data-price">
+                        <p class="cart-price">${item.price}$</p>
+                        <div class="cart-data-count">  
+                            <button class="cart-increase">+</button>
+                            <span>count: ${item.count}</span>
+                            <button class="cart-decrease">-</button>
+                        </div>
+                    </div>`;
+            sidebar.appendChild(newCart);
         });
     }
 });

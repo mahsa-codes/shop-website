@@ -261,7 +261,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px; 
+    gap: 20px; 
     font-weight: 500;   
 }
 .cart-data-price p {
