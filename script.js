@@ -142,7 +142,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const product = productsData.find(p=> p.id === productId);
                 const existItem = cart.find(item => item.id ===productId);
                 if(existItem) {
-                    existItem.count++;
+                    if(existItem.count < 10){
+                        existItem.count++;
+                    } else {
+                        alert("out of stock");
+                        return;
+                    }
+                    
                 } else {
                     cart.push({...product, count : 1})
                 }
