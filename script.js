@@ -191,6 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.appendChild(totalPrice);
         increaseCount();
         decreaseCount();
+        setupTotalButton();
     }
 
     function increaseCount() {
@@ -230,6 +231,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem("cart", JSON.stringify(cart));
                 renderCart();
             });
+        });
+    }
+    function setupTotalButton() {
+        const totalButton = document.getElementById("total-price");
+        totalButton.addEventListener('click', function(){
+            const currentUser = JSON.parse(localStorage.getItem("user"));
+            if (!currentUser) {
+                alert("Please First Login Into Your Account!");
+                return
+            }
+            let cart = JSON.parse(localStorage.getItem("cart"));
+            let total = cart.reduce((sum,item)=> sum+(item.price*item.count),0);
+            alert(`${currentUser.name}, Your Total Price is ${total}`);
         });
     }
 });
