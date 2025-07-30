@@ -175,12 +175,61 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="cart-data-price">
                         <p class="cart-price">${item.price}$</p>
                         <div class="cart-data-count">  
-                            <button class="cart-increase">+</button>
+                            <button class="cart-increase" data-id="${item.id}">+</button>
                             <span>count: ${item.count}</span>
-                            <button class="cart-decrease">-</button>
+                            <button class="cart-decrease" data-id="${item.id}">-</button>
                         </div>
                     </div>`;
+            
             sidebar.appendChild(newCart);
+            
+        });
+        const totalPrice = document.createElement('div');
+        totalPrice.className = "cart-total";
+        totalPrice.innerHTML= `
+        <button class="total-price" id="total-price">Total Price</button>`;
+        sidebar.appendChild(totalPrice);
+        increaseCount();
+        decreaseCount();
+    }
+
+    function increaseCount() {
+        const increaseButtons = document.querySelectorAll('.cart-increase');
+        increaseButtons.forEach(button=>{
+            button.addEventListener('click', function(){
+                const productId = parseInt(button.dataset.id);
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const product = cart.find(p=> p.id === productId);
+                if(product) {
+                    if(product.count < 10){
+                        product.count++;
+                    } else {
+                        alert("out of stock");
+                        return;
+                    }
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                renderCart();
+            });
+        });
+    }
+    function decreaseCount() {
+        const decreaseButtons = document.querySelectorAll('.cart-decrease');
+        decreaseButtons.forEach(button=>{
+            button.addEventListener('click', function(){
+                const productId = parseInt(button.dataset.id);
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const productIndex = cart.findIndex(p=> p.id === productId);
+                if(productIndex > -1) {
+                    if (cart[productIndex].count >1 ){
+                        cart[productIndex].count--;
+                    } else {
+                        cart.splice(productIndex, 1);
+                    }        
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                renderCart();
+            });
         });
     }
 });
