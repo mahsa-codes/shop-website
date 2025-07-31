@@ -1,66 +1,66 @@
 [
     {
         "id":1,
-        "title" : "HP Keyboard",
+        "title" : "Samsung Phone A1",
         "price" : 1950,
         "count" : 10,
-        "image" : "images/keyboard.png"
+        "image" : "images/file1.png"
     },
     {
         "id":2,
-        "title" : "Tesco Keyboard",
+        "title" : "Samsung Phone A2",
         "price" : 2500,
         "count" : 10,
-        "image" : "images/keyboard.png"
+        "image" : "images/file2.png"
     },
     {
         "id":3,
-        "title" : "Logitech Keyboard",
+        "title" : "Samsung Phone A3",
         "price" : 3200,
         "count" : 10,
-        "image" : "images/keyboard.png"
+        "image" : "images/file3.png"
     },
     {
         "id":4,
-        "title" : "China Keyboard",
+        "title" : "Samsung Phone A4",
         "price" : 2350,
         "count" : 10,
-        "image" : "images/keyboard.png"
+        "image" : "images/file4.png"
     },
     {
         "id":5,
-        "title" : "Android Keyboard",
+        "title" : "iphone Mobile B1",
         "price" : 3650,
         "count" : 10,
-        "image" : "images/keyboard.png"
+        "image" : "images/file5.png"
     },
     {
         "id":6,
-        "title" : "Wireless Keyboard",
+        "title" : "iphone Mobile B2",
         "price" : 700,
         "count" : 10,
-        "image" : "images/keyboard.png"
+        "image" : "images/file6.png"
     },
     {
         "id":7,
-        "title" : "Samsung Keyboard",
+        "title" : "Sony Phone C1",
         "price" : 6500,
         "count" : 10,
-        "image" : "images/keyboard.png"
+        "image" : "images/file7.png"
     },
     {
         "id":8,
-        "title" : "Sony Keyboard",
+        "title" : "Sony Phone C2",
         "price" : 5800,
         "count" : 10,
-        "image" : "images/keyboard.png"
+        "image" : "images/file8.png"
     },
     {
         "id":9,
-        "title" : "iphone Keyboard",
+        "title" : "iphone Mobile D1",
         "price" : 9000,
         "count" : 10,
-        "image" : "images/keyboard.png"
+        "image" : "images/file9.png"
     }
 
 ]

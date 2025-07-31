@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         <h2 class="product-title">${product.title}</h2>
                                 <img src="${product.image}" alt="${product.title}"/>
                                 <div class="product-buy">
-                                    <p class="product-price">${product.price} $</p>
-                                    <p class="product-number">${product.count}</p>
+                                    <p class="product-price">${product.price}$</p>
+                                    <p class="product-number">Stock:${product.count}</p>
                                     <button class="buy" data-id="${product.id}" type="button">Add To Cart</button>
                                 </div>`;
                     productsContainer.appendChild(newCard);        

@@ -11,6 +11,8 @@ body {
         "wdth" 100;
     text-align: center;
     margin-top: 60px;
+    background-image: url("./images/background.jpg");
+    color: white;
 }
 
 .login-page, .register-page {
@@ -40,6 +42,13 @@ body {
     gap: 10px;
 
 }
+.logSubmit a , .registerSubmit a{
+    color: white;
+}
+.logSubmit a:hover, .registerSubmit a:hover {
+    color: rgb(14, 87, 133);
+}
+
 
 .logSubmit button, .registerSubmit button {
     font-size: 20px;
